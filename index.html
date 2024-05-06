@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+   1) Write a program to print the sum of smallest unique no and smallest duplicate number.
+     
+let input=prompt("enter a number : ");
+let filt="",dup="",unq="";
+for(n of input){
+    if(!filt.includes(n))
+        filt+=n
+}
+for(i of filt){
+      count=0;
+    for(j of input){
+         if(i==j){
+            count++;
+         }
+        }
+         if(count>1) dup+=Number(i)
+            else unq+=Number(i)
+}
+
+let min=dup[0];
+let min1=unq[0];
+for(m of dup){
+    if(m<min){
+        min=m;
+    }
+    
+}
+for(v of unq){
+    if(v<min1){
+        min1=v;
+    }
+}
+
+console.log(` sum of smallest unique  and duplicate  is : ${min1} + ${min} =`,Number(min)+Number(min1))
+
+2) Write a program to print the sum of largest duplicate and largest unique number.
+
+
+let input=prompt("enter a number : ");
+let filt="",dup="",unq="";
+for(n of input){
+    if(!filt.includes(n))
+        filt+=n
+}
+for(i of filt){
+      count=0;
+    for(j of input){
+         if(i==j){
+            count++;
+         }
+        }
+         if(count>1) dup+=Number(i)
+            else unq+=Number(i)
+}
+let max=dup[0];
+let max1=unq[0];
+
+for(m of dup){
+  
+    if(m>max){
+        max=m
+    }
+}
+for(v of unq){
+   
+    if(v>max1){
+        max1=v
+    }
+
+}
+
+
+console.log(` sum of Largest unique  and  duplicate number is : ${max1} + ${max} =`,Number(max)+Number(max1))
+
+
+
+
+    </script>
+</body>
+</html>
